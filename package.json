@@ -1,0 +1,33 @@
+{
+  "name": "id-generator",
+  "version": "1.0.0",
+  "description": "A tiny id generator",
+  "main": "app.server.js",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "jsdoc-to-markdown": "^6.0.1",
+    "marked": "^1.2.2"
+  },
+  "scripts": {
+    "start": "node app.server",
+    "docs": "jsdoc2md app.server.js > assets/docs.md & npx marked assets/docs.md -o assets/docs.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MuhammedBeraKoc/id-generator.git"
+  },
+  "keywords": [
+    "id",
+    "node",
+    "docker"
+  ],
+  "author": "Muhammed Bera Koc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MuhammedBeraKoc/id-generator/issues"
+  },
+  "homepage": "https://github.com/MuhammedBeraKoc/id-generator#readme"
+}

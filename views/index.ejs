@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        * {
+            font-family: monospace;
+        }
+
+        body {
+            margin: 40px;
+        }
+
+        .code {
+            background-color: #f2f2f2;
+            border-radius: 2px;
+            padding: 4px 8px;
+            display: inline-block;
+        }
+
+        div, span, li {
+            font-size: 1.2rem;
+        }
+
+        #js {
+            background-color: #F7E018;
+            font-family: sans-serif;
+            font-size: 1.6rem;
+            padding: 1.2rem 0.3rem 0.2rem 0.8rem;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        ul {
+            margin: 24px 0;
+        }
+
+    </style>
+    <title>ID Generator</title>
+</head>
+<body>
+    <h1>A tiny id generator coded with <span id="js">JS</span></h1>
+    <div>Creates lovely ids for your app.</div>
+
+    <div>There are two API options (both POST requests):</div>
+    <ul>
+        <li><span class="code">localhost:5050/id?limit=&lt;number&gt;</span>: Generates an id with the digits equal to limit. Default limit is 8.</li>
+        <li><span class="code">localhost:5050/valid?id=&lt;id&gt;</span>: Returns a boolean value base on the validation of the given id.</li>
+        <li><span class="code">localhost:5050/docs</span>: Gets an HTML page with documentation.</li>
+    </ul>
+
+    <div>Deployed with 🐳</div>
+
+</body>
+</html>
