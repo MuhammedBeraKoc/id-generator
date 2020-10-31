@@ -17,9 +17,9 @@ Generates a random id. Uniqueness is very alike to happen.An id is a random seq
 
 **Kind**: global function  
 
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| limit | <code>number</code> | <code>8</code> | A value indicating the limit for number of digits |
+| Param | Type | Description |
+| --- | --- | --- |
+| limit | <code>number</code> | A value indicating the limit for number of digits |
 
 <a name="isValidId"></a>
 

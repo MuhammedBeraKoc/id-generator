@@ -8,12 +8,18 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "@types/jest": "^26.0.15",
+    "jest": "^26.6.1",
     "jsdoc-to-markdown": "^6.0.1",
-    "marked": "^1.2.2"
+    "marked": "^1.2.2",
+    "prettier": "^2.1.2",
+    "pretty": "^2.0.0",
+    "supertest": "^6.0.0"
   },
   "scripts": {
-    "start": "node app.server",
-    "docs": "jsdoc2md app.server.js > assets/docs.md & npx marked assets/docs.md -o assets/docs.html"
+    "test": "jest --verbose",
+    "start": "npm run docs & node app.server.js",
+    "docs": "jsdoc2md functions.js > assets/docs.md & npx marked assets/docs.md -o views/docs.ejs & node configure-docs-ejs.js"
   },
   "repository": {
     "type": "git",

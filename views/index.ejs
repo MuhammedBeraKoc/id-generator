@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="/public/favicon.ico">
     <style>
         * {
             font-family: monospace;
@@ -15,8 +16,20 @@
         }
 
         .code {
-            background-color: #f2f2f2;
-            border-radius: 2px;
+            font-weight: bold;
+            user-select: text;
+            background-color: rgba(38,132,255,0.1);
+            color: #2684FF;
+            border-radius: 0 2px 2px 0;
+            padding: 4px 8px;
+            display: inline-block;
+        }
+
+        .request {
+            user-select: text;
+            background-color: #2684FF;
+            color: white;
+            border-radius: 2px 0 0 2px;
             padding: 4px 8px;
             display: inline-block;
         }
@@ -26,20 +39,74 @@
         }
 
         #js {
-            background-color: #F7E018;
+            background-color: #2684FF;
+            color: white;
             font-family: sans-serif;
             font-size: 1.6rem;
             padding: 1.2rem 0.3rem 0.2rem 0.8rem;
         }
 
+        .docker {
+            font-size: 1rem;
+            display: inline-flex;
+            border-radius: 4px;
+            padding: 6px 12px;
+            align-items: center;
+            background-color: #2684FF;
+            color: white;
+            user-select: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .no-select {
+            user-select: none;
+        }
+
+        .declare {
+            font-size: 2rem;
+            margin-top: 24px;
+        }
+
+        .creator {
+            font-size: inherit;
+            color: #2684FF;
+            transition: all .2s ease-in-out;
+        }
+
+        .creator:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .f2 {
+            font-size: 2rem;
+        }
+
         li {
             margin: 8px 0;
+            user-select: none;
         }
 
         ul {
             margin: 24px 0;
         }
 
+        @media screen and (max-width: 600px) {
+            h1 {
+                line-height: 2.4rem;
+            }
+
+            #js {
+                font-size: 1rem;
+                padding: 0.8rem 0.24rem 0.24rem 0.6rem;
+            }
+
+            ul {
+                padding-inline-start: 20px;
+            }
+        }
     </style>
     <title>ID Generator</title>
 </head>
@@ -47,14 +114,15 @@
     <h1>A tiny id generator coded with <span id="js">JS</span></h1>
     <div>Creates lovely ids for your app.</div>
 
-    <div>There are two API options (both POST requests):</div>
+    <div>There are three API options:</div>
     <ul>
-        <li><span class="code">localhost:5050/id?limit=&lt;number&gt;</span>: Generates an id with the digits equal to limit. Default limit is 8.</li>
-        <li><span class="code">localhost:5050/valid?id=&lt;id&gt;</span>: Returns a boolean value base on the validation of the given id.</li>
-        <li><span class="code">localhost:5050/docs</span>: Gets an HTML page with documentation.</li>
+        <li><span class="request no-select">POST</span><span class="code">localhost:&lt;port&gt;/id?limit=&lt;number&gt;</span>: Generates an id with the digits equal to limit. Default limit is 8.</li>
+        <li><span class="request no-select">POST</span><span class="code">localhost:&lt;port&gt;/valid?id=&lt;id&gt;</span>: Returns a boolean value base on the validation of the given id.</li>
+        <li><span class="request no-select">GET</span><span class="code">localhost:&lt;port&gt;/docs</span>: Gets an HTML page with documentation.</li>
     </ul>
 
-    <div>Deployed with 🐳</div>
+    <div onclick="(() => window.open('https://hub.docker.com/repository/docker/mberakoc/id-generator', '_blank'))()" class="docker"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg>&nbsp;Pull Docker Image</div>
+    <div class="declare"><span class="request f2">Created by </span><span onclick="(() => window.open('https://github.com/MuhammedBeraKoc', '_blank'))()" class="creator code">Bera</span></div>
 
 </body>
 </html>

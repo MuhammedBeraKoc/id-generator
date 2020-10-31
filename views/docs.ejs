@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="/public/favicon.ico">
+
+    <style>
+      * {
+        font-family: monospace;
+      }
+
+      body {
+        margin: 40px;
+      }
+
+      a {
+        color: rgba(38, 132, 255, 0.8);
+      }
+
+      code {
+        background-color: rgba(38, 132, 255, 0.1);
+        border-radius: 2px;
+        padding: 4px 8px;
+        display: inline-block;
+        color: #2684FF;
+        font-weight: bold;
+      }
+
+      h2 {
+        font-family: monospace;
+        font-size: 2rem;
+        color: #2684ff;
+      }
+
+      table {
+        border-collapse: separate;
+        border-spacing: 0 1em;
+      }
+
+      th {
+        min-width: 5vw;
+      }
+
+      td {
+        text-align: center;
+      }
+    </style>
+
+    <title>ID Generator</title>
+  </head>
+
+  <body>
+    <h2 id="functions">Functions</h2>
+    <dl>
+      <dt><a href="#generateId">generateId(limit)</a> ⇒ <code>string</code></dt>
+      <dd>
+        <p>Generates a random id. Uniqueness is very alike to happen.
+          An id is a random sequence of lowercase characters and digits</p>
+      </dd>
+      <dt><a href="#isValidId">isValidId(id)</a> ⇒ <code>boolean</code></dt>
+      <dd>
+        <p>Returns true if the id complies the given rules, otherwise false.</p>
+      </dd>
+    </dl>
+
+    <p><a name="generateId"></a></p>
+    <h2 id="generateidlimit-⇒-string">generateId(limit) ⇒ <code>string</code></h2>
+    <p>Generates a random id. Uniqueness is very alike to happen.
+      An id is a random sequence of lowercase characters and digits</p>
+    <p><strong>Kind</strong>: global function </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Param</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>limit</td>
+          <td><code>number</code></td>
+          <td>A value indicating the limit for number of digits</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><a name="isValidId"></a></p>
+    <h2 id="isvalididid-⇒-boolean">isValidId(id) ⇒ <code>boolean</code></h2>
+    <p>Returns true if the id complies the given rules, otherwise false.</p>
+    <p><strong>Kind</strong>: global function </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Param</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>id</td>
+          <td><code>String</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </body>
+
+</html>
